@@ -6,7 +6,7 @@ class Visitor < ActiveRecord::Base
 	column :phone, :string
 	validates_presence_of :business, :contactname, :email
 
-	IMAGE_LABELS = ['Any Smartphone', 'Your Own Content', 'Adult Learning']
+	IMAGE_LABELS = ['Online Companion for any F2F Classes', 'Easy To Add Your Own Content', 'Use On Any Smartphone']
 
 	def update_spreadsheet
 		connection = GoogleDrive.login(ENV["GMAIL_USERNAME"], ENV["GMAIL_PASSWORD"])
