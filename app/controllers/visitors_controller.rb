@@ -11,7 +11,10 @@ class VisitorsController < ApplicationController
   def create
   	@visitor = Visitor.new(secure_params)
   	if @visitor.valid?
-  		@visitor.update_spreadsheet
+      logger.info {"Starting email first"}
+      Inquiry.inquiry_received(@visitor).deliver
+      logger.info {"Starting email second"}
+      Inquiry.inquiry_response(@visitor).deliver
   		flash[:notice] = "Thanks #{@visitor.contactname}, your inquiry is being sent."
   		render :new
   	else
