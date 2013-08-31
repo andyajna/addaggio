@@ -1,2 +1,57 @@
 <% content_for :title do %>addaggio<% end %>
+<% content_for :description do %>About addaggio and its products<% end %>
 <h3>addaggio</h3>
+
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+     	<li data-target="#myCarousel" data-slide-to="2"></li>
+   	</ol>
+   	<div class="carousel-inner">
+   		<div class="item active center">
+       		<%= image_tag "man-with-smartphone.jpg" %>
+       		<div class="carousel-caption text-center">
+         		<h4><%= Visitor::IMAGE_LABELS[0] %></h4>
+       		</div>
+     	</div>
+     	<div class="item">
+       		<img src="http://lorempixel.com/849/800/city/7">
+       		<div class="carousel-caption text-center">
+         		<h4><%= Visitor::IMAGE_LABELS[1] %></h4>
+       		</div>
+     	</div>
+     	<div class="item">
+       		<img src="http://lorempixel.com/849/800/city/6">
+       		<div class="carousel-caption text-center">
+         		<h4><%= Visitor::IMAGE_LABELS[2] %></h4>
+       		</div>
+     	</div>
+   	</div>
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+ </div>
+ <div class="text-center">
+ 	<h5>Ask about setting up a demo for your business</h5>
+ 	<div id="modal-form" class="modal" style="display: <%= @visitor.errors.any? ? 'block' : 'none';%>">
+ 	<%= simple_form_for @visitor do |f| %>
+ 	<div class="modal-header">
+ 		<a class="close" data-dismiss="modal">&#215;</a>
+ 		<h3>Ask about a demo</h3>
+ 	</div>
+ 	<div class="modal-body">
+ 	<%= f.error_notification %>
+ 	<%= f.input :business, label: "Business Name:" %>
+ 	<%= f.input :contactname %>
+ 	<%= f.input :email %>
+ 	<%= f.input :phone %>
+ 	</div>
+ 	<div class="modal-footer">
+ 	<%= f.submit "Send Inquiry", :class => "btn btn-primary" %>
+ 	</div>
+ 	<% end %>
+ </div>
+ <div id="call-to-action">
+ 	<a class="btn btn-primary btn-large" data-toggle="modal" href="#modal-form">Ask about a demo</a>
+ </div>
+</div>
