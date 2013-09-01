@@ -89,7 +89,7 @@ config.action_mailer.default_url_options = { :host => 'cryptic-lake-1056.herokua
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "gmail.com",
+    domain: "cryptic-lake-1056.herokuapp.com",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
