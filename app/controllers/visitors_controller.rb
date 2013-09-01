@@ -19,7 +19,7 @@ class VisitorsController < ApplicationController
         format.json { render json: @visitor, status: :created, location: @visitor }
       else
         format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: @visitor.errors, status: :unprocessable_entity }
       end
     end
   end
