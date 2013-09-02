@@ -1,6 +1,7 @@
 class Visitor < ActiveRecord::Base
 	has_no_table
 	column :business, :string
+	column :businesstype, :string
 	column :contactname, :string
 	column :email, :string
 	column :phone, :string
