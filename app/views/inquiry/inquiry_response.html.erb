@@ -4,13 +4,17 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Thankyou for contacting Course Companion</h1>
-    <p>blah blah</p>
+    <h3>Thankyou for contacting Course Companion</h3>
+    <p>We'd be delighted to set up a demo for you to play with and see if it suits your training needs. The information you have provided us is:</p>
 
     <Table>
       <tr>
         <td><strong>Name:</td>
         <td><%= @inquiry.contactname %></td>
+      </tr>
+      <tr>
+        <td><strong>Business / Company:</td>
+        <td><%= @inquiry.business %></td>
       </tr>
       <tr>
         <td><strong>Email:</td>
@@ -21,5 +25,24 @@
         <td><%= @inquiry.phone %></td>
       </tr>
     </table>
+
+    <p>A couple of things we'd like you to know:</p>
+    <Table>
+      <tr>
+        <td><strong>Trial:</strong><br>
+        The trial will be free for 30 days so you have time to add content and use it in a real situation. After that you will be charged according to our cost schedule, which is available on <a href="http://www.coursecompanion.com.au" target="_new">coursecompanion.com.au</a>.</td>
+      </tr>
+      <tr>
+        <td><strong>We'll email you once the demo is set up:</strong><br>
+        We'll let you know by email once your demo is set up and ready to go - yes there are real people here ready to assist you and get you going. We'll test it and set you up with an administrator log in and let you know when you're good to go. Expect about a day for us to complete the setup.</td>
+      </tr>
+      <tr>
+        <td><strong>Ongoing Support:</strong><br>
+        We are here to help you improve your learning, so rest assured we are here to listen to how you work and your own needs. Feel free to contact us at any time.</td>
+      </tr>
+    </table>
+    <p>If you have any more questions, either <a href="mailto:andrewkemp70@com?Subject=2nd%20Inquiry%20From%20Course%20Companion%20Client">email me</a> or click here to complete the demo setup process.</p>
+    <p><strong>Andrew Kemp</strong></p>
+    <p>Owner, Course Companion</p>
   </body>
 </html>
