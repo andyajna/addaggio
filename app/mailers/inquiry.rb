@@ -1,5 +1,5 @@
 class Inquiry < ActionMailer::Base
-  default from: "Course Companion"
+  default from: "andrewkemp70@gmail.com"
 
   def inquiry_received(inquiry)
   	@inquiry = inquiry
