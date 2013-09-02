@@ -42,9 +42,10 @@
  	<div class="modal-body">
  	<%= f.error_notification %>
  	<%= f.input :business, label: "Business Name:" %>
- 	<%= f.input :contactname %>
- 	<%= f.input :email %>
- 	<%= f.input :phone %>
+  <%= f.input :type, label: "Type of Business:" %>
+ 	<%= f.input :contactname, label: "Your Name:" %>
+ 	<%= f.input :email, label: "Your Email:" %>
+ 	<%= f.input :phone, label: "Your Phone: (Australia only if you'd like us to call)" %>
  	</div>
  	<div class="modal-footer">
  	<%= f.submit "Send Inquiry", :class => "btn btn-primary" %>
