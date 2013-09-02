@@ -1,7 +1,7 @@
 class VisitorsController < ApplicationController
 	
 	def secure_params
-  		params.require(:visitor).permit(:business, :contactname, :email, :phone, :type)
+  		params.require(:visitor).permit(:business, :contactname, :email, :phone, :businesstype)
   	end
 
   def new
