@@ -10,7 +10,7 @@ class VisitorsController < ApplicationController
 
   def create
     @visitor = Visitor.new(secure_params)
-    if @visitor.valid?
+    if @visitor.save
       logger.info {"Starting email inquiry_received"}
       Inquiry.inquiry_received(@visitor).deliver
       logger.info {"Starting email inquiry_response"}
