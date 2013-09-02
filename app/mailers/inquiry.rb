@@ -2,6 +2,7 @@ class Inquiry < ActionMailer::Base
   default from: "Course Companion"
 
   def inquiry_received(inquiry)
+  	@inquiry = inquiry
   	mail(:to => "andrewkemp70@gmail.com", :subject => "Demo Inquiry From CourseCompanion")
   end
 
