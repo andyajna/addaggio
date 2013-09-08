@@ -1,8 +1,9 @@
 <% content_for :title do %>Course Companion<% end %>
 <% content_for :description do %>About Course Companion<% end %>
-<h3>Course Companion</h3>
+
 
 <div id="myCarousel" class="carousel slide">
+  <h3>Course Companion</h3>
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -31,7 +32,7 @@
    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
  </div>
- <div class="text-center">
+ <div align="center">
  	<h5>Set up a trial for your organisation</h5>
  	<div id="modal-form" class="modal" style="display: <%= @visitor.errors.any? ? 'block' : 'none';%>">
  	<%= simple_form_for @visitor do |f| %>
@@ -52,7 +53,7 @@
  	</div>
  	<% end %>
  </div>
- <div id="call-to-action">
+ <div id="call-to-action" align="center">
  	<a class="btn btn-primary btn-large" data-toggle="modal" href="#modal-form">Set up a Trial</a>
  </div>
 </div>
