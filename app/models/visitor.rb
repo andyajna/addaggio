@@ -23,6 +23,6 @@ class Visitor < ActiveRecord::Base
 		ws[last_row, 4] = self.email
 		ws[last_row, 5] = self.phone 
 		ws.save
-end
+	end
 
 end

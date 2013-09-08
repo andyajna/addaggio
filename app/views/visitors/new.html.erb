@@ -32,12 +32,12 @@
    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
  </div>
  <div class="text-center">
- 	<h5>Ask about setting up a demo for your business</h5>
+ 	<h5>Set up a trial for your organisation</h5>
  	<div id="modal-form" class="modal" style="display: <%= @visitor.errors.any? ? 'block' : 'none';%>">
  	<%= simple_form_for @visitor do |f| %>
  	<div class="modal-header">
  		<a class="close" data-dismiss="modal">&#215;</a>
- 		<h3>Ask about a demo</h3>
+ 		<h3>Set up a trial</h3>
  	</div>
  	<div class="modal-body">
  	<%= f.error_notification %>
@@ -48,11 +48,11 @@
  	<%= f.input :phone, label: "Your Phone: (Australia only if you'd like us to call)" %>
  	</div>
  	<div class="modal-footer">
- 	<%= f.submit "Send Inquiry", :class => "btn btn-primary" %>
+ 	<%= f.submit "Send Request", :class => "btn btn-primary" %>
  	</div>
  	<% end %>
  </div>
  <div id="call-to-action">
- 	<a class="btn btn-primary btn-large" data-toggle="modal" href="#modal-form">Ask about a demo</a>
+ 	<a class="btn btn-primary btn-large" data-toggle="modal" href="#modal-form">Set up a Trial</a>
  </div>
 </div>
